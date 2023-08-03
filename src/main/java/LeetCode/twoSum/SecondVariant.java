@@ -9,7 +9,8 @@ public class SecondVariant {
         int index = 0;
         for (int num : nums) {
             int complement = target - num;
-            int complementIndex = numIndices.containsKey(complement) ? numIndices.get(complement) : -1;
+            int complementIndex =
+                    numIndices.containsKey(complement) ? numIndices.get(complement) : -1;
             if (complementIndex != -1 && complementIndex != index) {
                 return new int[]{complementIndex, index};
             }
