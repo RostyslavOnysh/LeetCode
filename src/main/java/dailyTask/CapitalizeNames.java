@@ -19,5 +19,5 @@ public class CapitalizeNames {
         for (String string : strings) {
             System.out.println(string);
         }
-    }
+     }
 }
