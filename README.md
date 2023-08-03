@@ -28,6 +28,6 @@ Contributions are welcome! If you have a better or alternative solution for any 
 
 I am passionate about coding and problem-solving. Connect with me on LinkedIn to stay updated on my coding journey, projects, and more.
 
-[LinkedIn Profile](https://www.linkedin.com/in/rostyslav-onyshchenko-7ab348281/)
+👽 [LinkedIn Profile](https://www.linkedin.com/in/rostyslav-onyshchenko-7ab348281/)
 
 Happy coding! Let's learn and grow together. 🤝
