@@ -2,7 +2,7 @@
 
 Welcome to my Coding Challenges repository! This repository contains my solutions to various coding challenges from LeetCode and CodeWars.
 
-### What is this repository about?
+### What is this repository about? 
 
 In this repository, you will find a collection of carefully crafted solutions to coding problems from popular platforms like LeetCode and CodeWars. Each solution is accompanied by an explanation of the approach used and the reasoning behind it. The goal is not only to showcase the final code but also to provide insights into problem-solving techniques and algorithmic thinking.
 
@@ -16,7 +16,7 @@ In this repository, you will find a collection of carefully crafted solutions to
 
 4. **Practice Makes Perfect:** Coding challenges are a fantastic way to practice problem-solving skills and apply data structures and algorithms to real-world scenarios. By exploring the solutions here, you can gain valuable insights into problem-solving techniques.
 
-### How to navigate the repository?
+### 🧭 How to navigate the repository? 
 
 The repository is organized into folders, each corresponding to a specific platform or coding challenge category. Within each folder, you'll find individual problem directories with the problem statements and their respective solutions.
 
