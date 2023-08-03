@@ -16,25 +16,25 @@ Output: 5, nums = [0,1,2,3,4,,,,,_]
 ```
 Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4, respectively. It does not matter what you leave beyond the returned k (hence they are represented by underscores).
 
-##  Algorithm Explanation:
+##  Algorithm Explanation: ⚡
 
 To solve the problem, we use a two-pointer approach: :
 
-Initialize two pointers: current and nextUnique.
-current is a pointer used to iterate through the elements of the array nums.
-nextUnique is a pointer that points to the position where the next unique element should be placed in nums.
-We start with current = 1 since the first element is already considered unique.
-Iterate through the array nums starting from index 1 (value of current).
-Compare the current element nums[i] with the previous element nums[i - 1].
-If nums[i] is different from nums[i - 1], it means the element is unique.
-Place the current element nums[i] at the position indicated by nextUnique in the array nums.
-Increment nextUnique to point to the next position where the next unique element should be placed.
-After the iteration, nextUnique will represent the number of unique elements in the array.
-Return nextUnique.
-Example:  ‼️
+* Initialize two pointers: current and nextUnique.
+* current is a pointer used to iterate through the elements of the array nums.
+* nextUnique is a pointer that points to the position where the next unique element should be placed in nums.
+* We start with current = 1 since the first element is already considered unique.
+* Iterate through the array nums starting from index 1 (value of current).
+* Compare the current element nums[i] with the previous element nums[i - 1].
+* If nums[i] is different from nums[i - 1], it means the element is unique.
+* Place the current element nums[i] at the position indicated by nextUnique in the array nums.
+* Increment nextUnique to point to the next position where the next unique element should be placed.
+* After the iteration, nextUnique will represent the number of unique elements in the array
+*  Return nextUnique.
+  
+### Example:  ‼️
 
-java
-Copy code
+```java
 class Solution {
 public int removeDuplicatesFromArray(int[] nums) {
 if (nums.length == 0) {
@@ -53,3 +53,4 @@ return 0;
         return nextUnique;
     }
 }
+```
