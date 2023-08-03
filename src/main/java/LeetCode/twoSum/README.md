@@ -92,7 +92,7 @@ Between the two variants, the second one is better in terms of both time and spa
 
 😺 Let's compare both variants:
 
-First Variant:
+# First Variant:
 
 ***Time Complexity: O(n^2)*** - The first loop iterates through the nums array, and for each element, it checks for the complement in the numIndices HashMap, which takes O(n) time in the worst case. Therefore, the overall time complexity is O(n^2).
 Space Complexity: O(n) - The first variant uses a HashMap numIndices to store the elements and their indices, resulting in O(n) space complexity.
@@ -101,3 +101,19 @@ Second Variant:
 ***Time Complexity: O(n)*** - The second variant also iterates through the nums array, but it performs only a single pass. The HashMap allows constant time lookup for the complement, which makes the overall time complexity O(n).
 Space Complexity: O(n) - The second variant still uses a HashMap numIndices to store the elements and their indices, resulting in the same O(n) space complexity.
 Overall, the second variant is more efficient due to its linear time complexity. It uses the HashMap for quick complement lookup, avoiding nested loops and reducing the computational overhead significantly. Both variants provide the correct solution, but the second one is preferable in terms of performance and efficiency, especially for large input arrays.
+
+# Second Variant  
+
+The second variant of the twoSum method also solves the Two Sum problem, but with an improved time complexity of O(n) compared to the O(n^2) time complexity of the first variant. The algorithm utilizes a HashMap for efficient complement lookup, allowing for a linear-time solution.
+
+💡 Explanation:
+The twoSum method in the SecondVariant class uses a HashMap to efficiently find a pair of indices in the nums array such that the elements at those indices add up to the given target. Here's an overview of how the algorithm works:
+
+💡 Time Complexity:
+The second variant of the twoSum method uses a single loop to traverse the nums array, which takes O(n) time. Additionally, the HashMap allows constant-time (O(1)) lookup for elements. Therefore, the overall time complexity of the algorithm is O(n).
+
+💡 Space Complexity:
+The algorithm uses a HashMap to store the elements and their indices, which results in O(n) space complexity. The space required for the HashMap grows linearly with the size of the nums array.
+
+💡 Conclusion:
+The second variant of the twoSum method offers a more efficient solution to the Two Sum problem compared to the first variant. By utilizing a HashMap for complement lookup, the algorithm achieves a linear time complexity of O(n) and provides a straightforward and elegant solution. The use of a HashMap significantly reduces the computational overhead and makes the algorithm more efficient, especially for large input arrays.
