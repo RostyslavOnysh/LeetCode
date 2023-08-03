@@ -72,10 +72,11 @@ The first loop iterates through each element in the nums array. In each iteratio
 * b. It checks if the complement is already present in the numIndices HashMap by using the containsKey method. If the complement exists, it means we have found a pair of elements that add up to the target. For example, if numIndices contains the complement 3, it means there is a pair of elements [3, num] that adds up to 6.
 * c. However, we additionally check if the complement's index is not equal to the current index. This is done to ensure that we are not using the same element twice in the pair. For example, if the nums array is [3, 3] and the target is 6, without this condition, the code might incorrectly return [0, 0], which is the same element used twice.
 If a valid pair of elements is found in the first loop, the method returns an array containing the indices of the two elements that form the desired sum.
-If no valid pair is found in the first loop, the code proceeds to the second loop.
-* a. In the second loop, it continues iterating through the nums array.
-* b. The index variable is updated in each iteration to keep track of the current index.
-* c. For each number in the nums array, it stores it in the numIndices HashMap with its index as the value. This way, the code builds the mapping between the numbers and their indices in the array.
+If no valid pair is found in the first loop, the code proceeds to the
+***second loop***.
+* d. In the second loop, it continues iterating through the nums array.
+* e. The index variable is updated in each iteration to keep track of the current index.
+* f. For each number in the nums array, it stores it in the numIndices HashMap with its index as the value. This way, the code builds the mapping between the numbers and their indices in the array.
 If no valid pair is found in the second loop either, the method reaches the end and returns null, indicating that no such pair of elements exists in the nums array that adds up to the target.
 Why using HashMap here is better than other variants:
 Using a HashMap is a highly efficient approach to solve the Two Sum problem because it allows constant-time (O(1)) lookup for elements. The primary advantage of using a HashMap is the fast lookup time, which helps avoid nested loops and reduces the computational overhead. By building a mapping between elements and their indices in the first loop, we can quickly check for the complement's existence in the second loop. This approach has a linear time complexity (O(n)) as we traverse the nums array only once.
