@@ -89,7 +89,7 @@ In comparison to other variants, which may involve nested loops or sorting the a
 
 Between the two variants, the second one is better in terms of both time and space complexity.
 
-Let's compare both variants:
+😺 Let's compare both variants:
 
 First Variant:
 
