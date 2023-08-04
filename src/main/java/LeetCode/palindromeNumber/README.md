@@ -31,7 +31,7 @@ Output: false
 
 ### Follow up: Could you solve it without converting the integer to a string?
 
-# Intuition
+# Intuition 📖
 When approaching this problem, we first recognize that a palindrome number remains the same when its digits are reversed. Our goal is to determine whether a given integer is a palindrome. However, to optimize the process, we can focus on reversing only half of the digits and comparing them to the other half.
 
 # Approach
@@ -41,18 +41,18 @@ When approaching this problem, we first recognize that a palindrome number remai
 4. We continue this process until the remaining part of the number is greater than the reversed part.
 5. After the loop, we compare the original number (or its half, in case of odd number of digits) with the reversed number. If they match, the number is a palindrome and we return true; otherwise, we return false.
 
-# Complexity
+# Complexity ❗
 
 1. The time complexity of this solution is determined by the number of digits in the input number, which is roughly $$O(\log_{10}(n))$$, where n
 is the input number.
 * This is because the while loop iterates until the remaining part of the number is greater than the reversed part. In each iteration, the number is divided by 10, effectively reducing the number of digits by one. Since the number of iterations required to reduce the number to 0 is proportional to the number of digits in the original number, the time complexity is logarithmic with respect to the input number's magnitude.
 
-- Space complexity:
+- Space complexity: 🐵
 Space complexity: The space complexity is 
 $$O(1)$$ as we only use a constant amount of extra space for variables.
 
 # Code
-```
+```java
 class Solution {
     public boolean isPalindrome(int x) {
      if (x < 0 || (x != 0 && x % 10 == 0)) {
