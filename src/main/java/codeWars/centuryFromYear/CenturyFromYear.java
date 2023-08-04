@@ -1,4 +1,4 @@
-package codeWars;
+package codeWars.centuryFromYear;
 
 public class CenturyFromYear {
     public static int century(int number) {
