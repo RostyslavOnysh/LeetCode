@@ -47,6 +47,11 @@ When approaching this problem, we first recognize that a palindrome number remai
 is the input number.
 * This is because the while loop iterates until the remaining part of the number is greater than the reversed part. In each iteration, the number is divided by 10, effectively reducing the number of digits by one. Since the number of iterations required to reduce the number to 0 is proportional to the number of digits in the original number, the time complexity is logarithmic with respect to the input number's magnitude.
 
+# Time Complexity Analysis: 💥 
+* The primary factor influencing the time complexity is the number of digits in the input integer x.
+* In each iteration of the loop, the last digit of x is extracted using modulo operation (x % 10), and the loop continues until x is fully reversed. Since the number of iterations is proportional to the number of digits in x, this process exhibits logarithmic behavior.
+* Assuming the loop runs until x becomes 0, the number of iterations corresponds to the number of digits in x, which is logarithmic in base 10. Consequently, the time complexity is denoted as O(log n), where n represents the value of the input integer x.
+
 - Space complexity: 🐵
 Space complexity: The space complexity is 
 $$O(1)$$ as we only use a constant amount of extra space for variables.
