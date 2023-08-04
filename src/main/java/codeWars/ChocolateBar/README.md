@@ -1,4 +1,5 @@
-```javapublic class ChocolateBar {
+```java
+public class ChocolateBar {
     public static int breakChocolate(int n, int m) {
         if (n <= 0 || m <= 0) {
             return 0;
