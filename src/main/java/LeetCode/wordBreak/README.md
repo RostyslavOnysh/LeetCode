@@ -1,4 +1,4 @@
-# Task
+# Task 📑
 
 Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
 
@@ -6,7 +6,7 @@ Given a string s and a dictionary of strings wordDict, return true if s can be s
 
 
 
-# Example 1:
+# Example 1: 
 ```java
 Input: s = "leetcode", wordDict = ["leet","code"]
 Output: true
