@@ -3,7 +3,14 @@ package dailyTask.ipDefanger;
 public class IPDefanger {
     public static String defangIPAddress(String address) {
       StringBuilder sb = new StringBuilder();
-      for (char c : address.toCharArray()) {
+        for (char c : address.toCharArray()) {
+            sb.append(c == '.' ? "[.]" : c);
+        }
+
+        return sb.toString();
+    }
+
+     /* for (char c : address.toCharArray()) {
           if (c == '.'){
               sb.append("[.]");
           }else {
@@ -12,6 +19,8 @@ public class IPDefanger {
       }
       return sb.toString();
     }
+
+      */
 
     public static void main(String[] args) {
         String address = ("1.1.1.1");
