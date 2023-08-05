@@ -1,4 +1,4 @@
-# Task
+# Task 📑
 
 Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
 
@@ -6,7 +6,7 @@ Given a string s and a dictionary of strings wordDict, return true if s can be s
 
 
 
-# Example 1:
+# Example 1: 
 ```java
 Input: s = "leetcode", wordDict = ["leet","code"]
 Output: true
@@ -61,7 +61,7 @@ With a memory footprint that's more efficient than around 98.58% of other Java s
 In the realm of algorithmic battles, this solution stands as a champion – its efficiency and elegance reigning supreme. It's as if the code has been woven with intricate spells, casting aside challenges and triumphing in both time and memory.
 
 # Code
-```
+ ```java
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
         int n = s.length();
