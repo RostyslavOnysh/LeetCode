@@ -66,6 +66,37 @@ int windowStart = 0, windowEnd = 0;
 * If the current character is already in charSet, it indicates a repeating character. The character at windowStart is removed from the set, and the windowStart pointer is moved one step to the right. This effectively contracts the window.
 * The loop continues until windowEnd reaches the end of the string.
 * The function returns longestSubstring, which holds the length of the longest substring without repeating characters.
+
+
+1. Initialize variables:
+2. charSet: An empty set to track characters in the current window.
+3. longestSubstring: Initialized to 0 to keep track of the longest substring without repeating characters.
+4. windowStart and windowEnd: Both initially set to 0, marking the start and end of the current window.
+5. ***First Iteration:***
+6. windowEnd is at index 0 ('a'). Since the set is empty, add 'a' to charSet.
+7. Update longestSubstring to 1 (length of the current window).
+8. Increment windowEnd to 1.
+9. ***Second Iteration:*** 
+10. windowEnd is at index 1 ('b'). 'b' is not in the set, so add it to charSet.
+11. Update longestSubstring to 2 (length of the current window).
+12. Increment windowEnd to 2.
+13. ***Third Iteration:***
+14. windowEnd is at index 2 ('c'). 'c' is not in the set, so add it to charSet.
+15. Update longestSubstring to 3 (length of the current window).
+16. Increment windowEnd to 3.
+17. ***Fourth Iteration:***
+18. windowEnd is at index 3 ('a'). 'a' is already in the set, so remove 'a' from the start of the window and increment windowStart to 1.
+19. ***Fifth Iteration:***
+20. windowEnd is at index 4 ('b'). 'b' is already in the set, so remove 'b' from the start of the window and increment windowStart to 2.
+21. ***Sixth Iteration:***
+22. windowEnd is at index 5 ('c'). 'c' is already in the set, so remove 'c' from the start of the window and increment windowStart to 3.
+23. ***Seventh Iteration:***
+24. windowEnd is at index 6 ('b'). 'b' is already in the set, so remove 'b' from the start of the window and increment windowStart to 4.
+25. At this point, the while loop ends because windowEnd is equal to the length of the input string.
+26. The function returns the value of longestSubstring, which is 3 (length of the longest substring without repeating characters).
+* So, for the input "abcabcbb", the code correctly calculates the length of the longest substring without repeating characters as 3.
+
+
 # Time Complexity:
 The time complexity of this algorithm is O(n), where n is the length of the input string s. The algorithm iterates through the string once, and each character is processed only once.
 
