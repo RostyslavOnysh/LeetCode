@@ -1,12 +1,21 @@
 package codeWars.squareNsum;
 
+import java.util.Arrays;
+
 public class squareNsum {
     public static int squareSum(int[] n) {
-        int result = 0;
-        for (int i = 0; i < n.length; i++) {
-            n[i] = (int) Math.pow(n[i], 2);
-            result += n[i];
+        /*   int result = 0;
+        for (int num : n) {
+            result += num * num;
         }
         return result;
+
+
+         */
+        return Arrays.stream(n).map(x -> x * x).sum();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(squareSum(new int[]{4}));
     }
 }
