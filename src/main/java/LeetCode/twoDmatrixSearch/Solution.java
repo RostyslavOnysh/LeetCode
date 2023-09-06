@@ -4,17 +4,17 @@ import static performanceCheker.Performance.logPerformance;
 
 public class Solution {
     public static boolean searchMatrix(int[][] matrix, int target) {
-        int i = 0;
-        int j = matrix[0].length - 1;
+        int rows = 0;
+        int col = matrix[0].length - 1;
 
-        while (i < matrix.length && j >= 0) {
+        while (rows < matrix.length && col >= 0) {
 
-            if (matrix[i][j] == target) {
+            if (matrix[rows][col] == target) {
                 return true;
             }
-            if (matrix[i][j] < target) {
-                i++;
-            } else j--;
+            if (matrix[rows][col] < target) {
+                rows++;
+            } else col--;
         }
         return false;
     }
