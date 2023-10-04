@@ -1,8 +1,5 @@
 package LeetCode.mergeKSortedList;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         int length = lists.length;
