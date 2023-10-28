@@ -12,12 +12,13 @@ public class Solution {
     }
 
     public static String multiply(String num1, String num2) {
-        StringBuilder reversedNum1 = new StringBuilder(num1).reverse();
-        StringBuilder reversedNum2 = new StringBuilder(num2).reverse();
+        String reversedNum1 = new StringBuilder(num1).reverse().toString();
+        String reversedNum2 = new StringBuilder(num2).reverse().toString();
 
         int m = reversedNum1.length();
         int n = reversedNum2.length();
         int[] result = new int[m + n];
+        boolean nonZeroAppended = false;
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -25,16 +26,15 @@ public class Solution {
                 int sum = product + result[i + j];
                 result[i + j] = sum % 10;
                 result[i + j + 1] += sum / 10;
+                if (sum != 0) {
+                    nonZeroAppended = true;
+                }
             }
         }
-
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(m + n);
         for (int i = m + n - 1; i >= 0; i--) {
-            if (sb.length() > 0 || result[i] != 0) {
-                sb.append(result[i]);
-            }
+            sb.append(result[i]);
         }
-
-        return sb.length() == 0 ? "0" : sb.toString();
+        return nonZeroAppended ? sb.toString() : "0";
     }
 }
