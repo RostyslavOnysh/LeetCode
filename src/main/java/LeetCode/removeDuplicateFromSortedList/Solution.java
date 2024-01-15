@@ -1,8 +1,5 @@
 package LeetCode.removeDuplicateFromSortedList;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode current = head;
@@ -18,25 +15,6 @@ public class Solution {
         }
         return head;
     }
-
-    /*
-        public ListNode deleteDuplicates(ListNode head) {
-         ListNode current = head;
-     if (head == null) {
-         return null;
-     }
-       while (current.next != null) {
-         if (current.val == current.next.val) {
-             current.next = current.next.next;
-        } else {
-            current = current.next;
-            }
-        }
-      return head;
-    }
-}
-     */
-
     public static void main(String[] args) {
         // Initialize linked list with values 1, 2, 2, 3
         ListNode head = new ListNode(1);
