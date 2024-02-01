@@ -1,7 +1,5 @@
 package LeetCode.ff;
 
-
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -11,17 +9,18 @@ import java.net.URL;
 public class CatApp {
     public static void main(String[] args) {
         try {
-            String imageUrl = "https://www.the-sun.com/wp-content/uploads/sites/6/2023/10/www-instagram-com-monkeycatluna-hl-851711797.jpg";
+            String imageUrl = "https://i.imgflip.com/7a5wlu.jpg";
             BufferedImage originalImage = getImageFromUrl(imageUrl);
 
             if (originalImage != null) {
                 // Отримання розмірів екрану
-                int screenWidth = Toolkit.getDefaultToolkit().getScreenSize().width;
+                Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                int screenWidth = (int) screenSize.getWidth();
+                int screenHeight = (int) screenSize.getHeight();
 
-                // Розрахунок нових розмірів зображення
-                int targetWidth = (int) (screenWidth * 0.8); // Зменшення на 80% ширини екрану
-                int targetHeight = (int) (originalImage.getHeight() * ((double) targetWidth / originalImage.getWidth()));
-
+// Обчислення нових розмірів зображення
+                int targetWidth = (int) (screenWidth * 0.8);
+                int targetHeight = (int) (screenHeight * 0.8 * ((double) originalImage.getHeight() / originalImage.getWidth()));
                 BufferedImage resizedImage = resizeImage(originalImage, targetWidth, targetHeight);
 
                 // Перетворення зменшеного зображення у ASCII-арт
@@ -49,8 +48,8 @@ public class CatApp {
 
     private static BufferedImage resizeImage(BufferedImage originalImage, int targetWidth, int targetHeight) {
         // Зменшення розмірів у 10 разів
-        int newWidth = originalImage.getWidth() / 2;
-        int newHeight = originalImage.getHeight() / 2;
+        int newWidth = originalImage.getWidth();
+        int newHeight = originalImage.getHeight();
 
         BufferedImage resizedImage = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = resizedImage.createGraphics();
@@ -75,7 +74,6 @@ public class CatApp {
             }
             asciiArt.append("\n");
         }
-
         return asciiArt.toString();
     }
 
@@ -86,12 +84,8 @@ public class CatApp {
     }
 
     private static void displayAsciiArtInTerminal(String asciiArt, Color color) {
-        // ANSI escape code for setting text color
         String colorCode = String.format("\u001B[38;2;%d;%d;%dm", color.getRed(), color.getGreen(), color.getBlue());
-
-        // ANSI escape code for resetting text color
         String resetColorCode = "\u001B[0m";
-
         System.out.println(colorCode + asciiArt + resetColorCode);
     }
 }

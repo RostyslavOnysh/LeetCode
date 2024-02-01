@@ -1,7 +1,7 @@
 package LeetCode.convertToTitleExcel.kotlin
 
 fun main() {
-    val solution = Solution()
+/*    val solution = Solution()
     val columnNumber = 2
     val columnTitle = solution.convertToTitle(columnNumber)
     println("Column title for $columnNumber is $columnTitle")
@@ -18,4 +18,6 @@ class Solution {
         }
         return result.toString()
     }
+
+ */
 }

@@ -1,7 +1,7 @@
 package LeetCode.removeDuplicateFromSortedList.kotlin
 
 class Solution2 {
-    fun deleteDuplicates(head: ListNode?): ListNode? {
+   /* fun deleteDuplicates(head: ListNode?): ListNode? {
         var current = head
         while (current != null && current.next != null) {
             if (current.`val` == current.next?.`val`) {
@@ -42,4 +42,6 @@ class Solution2 {
         println("Modified Linked List:")
         printLinkedList(newHead)
     }
+
+    */
 }

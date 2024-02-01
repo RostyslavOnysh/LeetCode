@@ -2,10 +2,10 @@ package LeetCode.ExcelSheetColumnNumber.kotlin
 
 
 fun main() {
-    val solution = Solution()
+  /*  val solution = Solution()
     val columnTitle = "CA"
     val columnNumber = solution.titleToNumber(columnTitle)
-    println("Column title for $columnTitle is $columnNumber")
+  //  println("Column title for $columnTitle is $columnNumber")
 }
 
 class Solution {
@@ -17,4 +17,6 @@ class Solution {
         }
         return result
     }
+
+   */
 }
