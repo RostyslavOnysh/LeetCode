@@ -1,4 +1,4 @@
-package LeetCode.task268MissingNumber;
+package LeetCode.task268_MissingNumber;
 
 public class Solution {
     public int missingNumber(int[] nums) {

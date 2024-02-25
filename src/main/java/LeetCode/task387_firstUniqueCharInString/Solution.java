@@ -1,4 +1,4 @@
-package LeetCode.firstUniqueCharInString;
+package LeetCode.task387_firstUniqueCharInString;
 
 import java.util.Hashtable;
 

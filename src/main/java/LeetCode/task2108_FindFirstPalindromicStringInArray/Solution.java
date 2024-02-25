@@ -1,4 +1,4 @@
-package LeetCode.task2108FindFirstPalindromicStringInArray;
+package LeetCode.task2108_FindFirstPalindromicStringInArray;
 
 public class Solution {
     private static final byte MAX_WORD_LENGTH = 100;
