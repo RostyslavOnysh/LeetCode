@@ -18,11 +18,7 @@ In this repository, you will find a collection of carefully crafted solutions to
 
 ### 🧭 How to navigate the repository ? 
 
-The repository is organized into folders, each corresponding to a specific platform or coding challenge category. Within each folder, you'll find individual problem directories with the problem statements and their respective solutions.
-
-### Contribute
-
-Contributions are welcome! If you have a better or alternative solution for any of the problems or want to add new coding challenges, feel free to open a pull request. Together, we can build a robust collection of coding solutions to benefit the coding community.
+The repository is organized into folders, each corresponding to a *specific platform* or coding challenge category. Within each folder, you'll find individual problem directories with the problem statements and their respective solutions.
 
 ### Connect with Me
 
