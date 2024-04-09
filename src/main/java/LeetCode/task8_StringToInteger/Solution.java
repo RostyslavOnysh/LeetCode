@@ -1,4 +1,4 @@
-package LeetCode.task8StringToInteger;
+package LeetCode.task8_StringToInteger;
 
 public class Solution {
     public int myAtoi(String s) {
