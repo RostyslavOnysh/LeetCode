@@ -1,3 +1,5 @@
+package prepOCA;
+
 public class Exercise1 {
     public static void main(String[] args) {
         int[] player1Cards = {10, 6, 8, 9, 7, 12, 7};
@@ -6,7 +8,7 @@ public class Exercise1 {
         int player2Wins = 0;
         System.out.println("****************************Play Card Busters!!!****************************\n");
 
-        for (int round = 1; round <= 7 && player1Wins < 4 && player2Wins < 4; round++) {
+        for (int round = 1; round <= 7; round++) {
 
             int player1Card = player1Cards[round - 1];
             int player2Card = player2Cards[round - 1];
