@@ -1,19 +1,11 @@
 package prepOCA;
+import static java.lang.Double.parseDouble;
 
 public class X {
-    String str = "default";
-    int value = 17;
-    X(String s){
-        str = s;
-    }
-    X(int i) {
-        value = i;
-    }
-    void print() {
-        System.out.println(str + " " + value);
-    }
-    public static void main(String[] args){
-        new X("hello").print();
-        new X(92).print();
-    }
-}
+    public static void main(String[] args) {
+        int numFish = 4;
+        String fishType = "tuna";
+     //   String anotherFish = numFish + 1;
+   //     System.out.println(anotherFish + " " + fishType);
+        System.out.println(numFish + " " + 1);
+    }}
