@@ -1,41 +1,38 @@
 package prepOCA;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Exercise2 {
-    private static int remainingAmount = 500;
-
     public static void main(String[] args) {
-        List<Integer> loanRequests = new ArrayList<>();
-        loanRequests.add(60);
-        loanRequests.add(20);
-        loanRequests.add(100);
-        loanRequests.add(80);
-        loanRequests.add(40);
-        loanRequests.add(300);
-        loanRequests.add(200);
-        loanRequests.add(100);
-        processLoanRequests(loanRequests);
-    }
+        double availableAmount = 500.0;
+        double[] loanRequests = {60.0, 20.0, 100.0, 80.0, 40.0, 300.0, 200.0, 100.0};
+        int unfacilitatedCount = 0;
+        boolean partialLoanProcessed = false;
 
-    public static void processLoanRequests(List<Integer> loanRequests) {
-        for (Integer request : loanRequests) {
-            if (remainingAmount >= request) {
-                remainingAmount -= request;
-                System.out.println("Loan of €" + request + " granted.");
+        for (double loanRequest : loanRequests) {
+            System.out.println("Cash in the pot: " + (int) availableAmount);
+            System.out.print("Loan amount requested: " + (int) loanRequest);
+
+            if (loanRequest <= availableAmount) {
+                availableAmount -= loanRequest;
+                System.out.println(" - Loan amount granted!");
             } else {
-                int amountGranted = remainingAmount;
-                remainingAmount = 0;
-                System.out.println("Insufficient funds. Only €" + amountGranted + " granted.");
+                if (!partialLoanProcessed) {
+                    System.out.println(" - The exact loan request amount cannot be processed in full (insufficient funds available).");
+                    double partialLoan = availableAmount;
+                    availableAmount = 0.0;
+                    System.out.println("However, we will give you what we can... " + (int) partialLoan);
+                    System.out.println("\nCash remaining in the pot: " + (int) availableAmount);
+                    unfacilitatedCount++;
+                }
+                unfacilitatedCount++;
                 break;
             }
+            System.out.println();
         }
-        if (remainingAmount == 0 && !loanRequests.isEmpty()) {
-            System.out.println("Outstanding loan request amounts:");
-            for (Integer request : loanRequests) {
-                System.out.println("€" + request);
-            }
+
+        System.out.println("\nThe following loan requests could not be facilitated:");
+        for (int i = 0; i < unfacilitatedCount; i++) {
+            double loanRequest = loanRequests[i + loanRequests.length - unfacilitatedCount];
+            System.out.println("€" + (int) loanRequest);
         }
     }
 }
