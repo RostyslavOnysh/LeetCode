@@ -1,6 +1,8 @@
 package prepOCA;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Exam_Ready_Quiz1_Q11 {
 
@@ -71,36 +73,12 @@ public class Exam_Ready_Quiz1_Q11 {
     StringBuilder sb = new StringBuilder(128);
 
     public static void main(String[] args) {
-        int day = 1;
-        switch (day) {
-            case 6:
-                System.out.print("Saturday");
-                break;
-            case 7:
-                System.out.print("Sunday");
-                break;
-            case 1:
-                System.out.print("Monday");
-                break;
-            case 2:
-                System.out.print("Tuesday");
-                break;
-            case 3:
-                System.out.print("Wednesday");
-                break;
-            case 4:
-                System.out.print("Thursday");
-                break;
-            case 5:
-                System.out.print("Friday");
-                break;
-            default:
-                System.out.println("In next half");
-        }
+        List<Integer> ages = new ArrayList<>();
+        ages.add(16);
+        ages.add(null);
+        for (int i = 0; i < ages.size(); i++) System.out.print(ages.get(i));
+        for (int i : ages) System.out.println(i);
     }
-    /*** TODO:12432 ***/
-    // add
-    /* sdfsdf ****/
 
 
 }
