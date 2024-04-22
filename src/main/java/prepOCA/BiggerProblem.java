@@ -2,14 +2,13 @@ package prepOCA;
 
 public class BiggerProblem extends Problem {
     public static void main(String uhOh[]) {
-        try {
-            throw new BiggerProblem();
-        } catch (BiggerProblem re) {
-            System.out.print("Problem?");
-        } catch (Problem e) {
-            System.out.print("Handled");
-        } finally {
-            System.out.print("Fixed!");
-        }
-    }
+       /* String message = "Ship Ahoy";
+        char x = message.charAt(1);
+        System.out.println(x);
+
+        */
+        String message = "Ship Ahoy";
+        String message2 = new String("Ship Ahoy");
+        System.out.println(message.compareTo(message2));
+    }// main
 }
