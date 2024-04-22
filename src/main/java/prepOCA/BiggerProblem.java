@@ -1,14 +1,12 @@
 package prepOCA;
 
-public class BiggerProblem extends Problem {
-    public static void main(String uhOh[]) {
-       /* String message = "Ship Ahoy";
-        char x = message.charAt(1);
-        System.out.println(x);
 
-        */
-        String message = "Ship Ahoy";
-        String message2 = new String("Ship Ahoy");
-        System.out.println(message.compareTo(message2));
+import java.util.Random;
+
+public class BiggerProblem extends Problem {
+    public static void main(String[] args){
+        Random r1 = new Random();
+        int randNum = r1.nextInt(3);
+        System.out.println(randNum);
     }// main
-}
+}// class
