@@ -25,7 +25,7 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
 
-        // Test cases
+        // Testsf cases
         String input1 = "babad";
         String result1 = solution.longestPalindrome(input1);
         System.out.println("Input: " + input1);

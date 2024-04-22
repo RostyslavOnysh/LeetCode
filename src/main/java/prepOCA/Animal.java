@@ -1,13 +1,14 @@
 package prepOCA;
 
-public class Animal {
-    private static int noOfAnimals;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-    public static void updateNoOfAnimals(){
-        Animal.noOfAnimals++;
-    }
-
-    public static int getNoOfAnimals() {
-        return noOfAnimals;
+class Animal {
+    public static void main(String[] args) {
+        System.out.printf("The value of PI is: %.2f", Math.PI);
     }
 }

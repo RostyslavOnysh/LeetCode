@@ -19,12 +19,12 @@ public class RemoveDuplicats {
                 }
             }
             if (passed) {
-                System.out.println("Test passed");
+                System.out.println("Testsf passed");
             } else {
-                System.out.println("Test failed");
+                System.out.println("Testsf failed");
             }
         } else {
-            System.out.println("Test failed");
+            System.out.println("Testsf failed");
         }
     }
 

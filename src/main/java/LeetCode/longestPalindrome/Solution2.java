@@ -48,7 +48,7 @@ public class Solution2 {
     public static void main(String[] args) {
         Solution2 solution = new Solution2();
 
-        // Test cases
+        // Testsf cases
         String input1 = "babad";
         String result1 = solution.longestPalindrome(input1);
         System.out.println("Input: " + input1);
