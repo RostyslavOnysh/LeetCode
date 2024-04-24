@@ -10,14 +10,15 @@ import java.util.Iterator;
 import java.util.List;
 
 class Animal {
+
     public static void main(String[] args){
-        new Animal().writeToFile();
+        Animal obj = new Animal();
+
     }
 
-    public void writeToFile(){
-        File file = new File("Write.txt");
-
+    public void writeToFile() throws IOException{
         try{
+            File file = new File("Output.txt");
             FileWriter fw = new FileWriter(file);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
@@ -25,6 +26,6 @@ class Animal {
             pw.close();
         }catch(IOException e){
             System.out.println("Unable to write to the file at this time.");
+            // Call a method to log the message.
         }
-    }
-}
+    }                                                                                                                                          }
