@@ -19,7 +19,17 @@ public class ValidPalindrome {
                 sb.append(Character.toLowerCase(c));
             }
         }
-        StringBuilder reversed = new StringBuilder(sb).reverse(); // Reverse the StringBuilder
-        return sb.toString().equals(reversed.toString());
+        //     StringBuilder reversed = new StringBuilder(sb).reverse(); // Reverse the StringBuilder
+        //  return sb.toString().equals(reversed.toString());
+        int i = 0;
+        int j = sb.length() - 1;
+        while (i < j) {
+            if (sb.charAt(i) != sb.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
     }
 }
