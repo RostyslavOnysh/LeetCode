@@ -33,7 +33,7 @@ public class Solution {
         Solution wordBreak = new Solution();
 
         String s1 = "leetcode";
-        List<String> wordDict1 = List.of("leet", "code");
+        List<String> wordDict1 = List.of("leet", "Solution.md");
         System.out.println(wordBreak.wordBreak(s1, wordDict1)); // Виведе: true
 
         String s2 = "applepenapple";

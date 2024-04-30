@@ -10,7 +10,7 @@ Given a string s and a dictionary of strings wordDict, return true if s can be s
 ```java
 Input: s = "leetcode", wordDict = ["leet","code"]
 Output: true
-//Explanation: Return true because "leetcode" can be segmented as "leet code"
+//Explanation: Return true because "leetcode" can be segmented as "leet Solution.md"
 ```
 # Example 2:
 ```java

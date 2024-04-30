@@ -9,7 +9,7 @@ class Answer {
 
     // Return a DataContainer instances for Strings
     static public DataContainer<String> createStringDataContainer() {
-        // Alter this code to return a DataContainer with String for the parameterized type
+        // Alter this Solution.md to return a DataContainer with String for the parameterized type
         // Give it the value "Hello"
         return new DataContainer<>("Hello");
     }
