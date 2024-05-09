@@ -9,13 +9,12 @@ public class Solution {
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(nums[i])) {
                 int prevIndex = map.get(nums[i]);
-                if (Math.abs(i - prevIndex) <= k) {
+                if (i - prevIndex <= k) {
                     return true;
                 }
             }
             map.put(nums[i], i);
         }
-
         return false;
     }
 }
