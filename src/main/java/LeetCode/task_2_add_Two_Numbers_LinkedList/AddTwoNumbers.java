@@ -1,4 +1,4 @@
-package LeetCode.addTwoNumbersLinkedList;
+package LeetCode.task_2_add_Two_Numbers_LinkedList;
 
 import java.util.ArrayList;
 import java.util.Arrays;

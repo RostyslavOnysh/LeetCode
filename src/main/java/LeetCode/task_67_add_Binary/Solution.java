@@ -1,4 +1,4 @@
-package LeetCode.addBinary;
+package LeetCode.task_67_add_Binary;
 
 public class Solution {
     public String addBinary(String a, String b) {
