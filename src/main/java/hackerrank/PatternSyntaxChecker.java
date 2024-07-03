@@ -6,19 +6,20 @@ import java.util.regex.PatternSyntaxException;
 
 public class PatternSyntaxChecker {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int testCase = Integer.parseInt(sc.nextLine());
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
 
-        while (testCase > 0) {
-            String pattern = sc.nextLine();
+        while(testCases > 0){
+            String pattern = in.nextLine();
             try {
                 Pattern.compile(pattern);
                 System.out.println("Valid");
             } catch (PatternSyntaxException e) {
-                System.out.println("invalid");
+                System.out.println("Invalid");
             }
-            testCase++;
+            testCases--;
         }
-        sc.close();
+        in.close();
     }
 }
+
