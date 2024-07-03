@@ -4,25 +4,23 @@ import java.util.List;
 
 public class AppleandOrange {
     public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
-       int appleOnHouse = 0;
-       int orangeOnHouse = 0;
+        int appleHouse = 0;
+        int orangeHouse = 0;
 
-       for (int apple : apples) {
-           int landingPosition = a + apple;
-           if (landingPosition >= s && landingPosition <= t) {
-               appleOnHouse++;
-           }
-       }
-
-        for (int orange : oranges) {
-            int landingPosition = b + orange;
-            if (landingPosition >= s && landingPosition <= t) {
-                orangeOnHouse++;
+        for (int apple : apples) {
+            int landingPos = a + apple;
+            if (landingPos >= s && landingPos <= t) {
+                appleHouse++;
             }
-            System.out.println(appleOnHouse);
-            System.out.println(orangeOnHouse);
         }
 
+        for (int orange : oranges) {
+            int landingPos = b + orange;
+            if (landingPos >= s && landingPos <= t) {
+                orangeHouse++;
+            }
+        }
+        System.out.println(appleHouse);
+        System.out.println(orangeHouse);
     }
-
 }
