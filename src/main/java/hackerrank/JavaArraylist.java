@@ -8,7 +8,6 @@ public class JavaArraylist {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-
         List<List<Integer>> lines = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
@@ -19,26 +18,21 @@ public class JavaArraylist {
             }
             lines.add(line);
         }
-
-
-        int query = sc.nextInt();
-
-        for (int i = 0; i < query; i++) {
+        int q = sc.nextInt();
+        for (int i = 0; i < q; i++) {
             int x = sc.nextInt() - 1;
             int y = sc.nextInt() - 1;
-
             if (x >= 0 && x < lines.size()) {
                 List<Integer> line = lines.get(x);
                 if (y >= 0 && y < line.size()) {
-                    System.out.println(line.get(x));
+                    System.out.println(line.get(y));
                 } else {
                     System.out.println("ERROR!");
                 }
             } else {
-                System.out.println("ERROR");
+                System.out.println("ERROR!");
             }
         }
-
         sc.close();
     }
 }
