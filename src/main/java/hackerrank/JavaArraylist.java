@@ -9,7 +9,6 @@ public class JavaArraylist {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         List<List<Integer>> lines = new ArrayList<>();
-
         for (int i = 0; i < n; i++) {
             int size = sc.nextInt();
             List<Integer> line = new ArrayList<>();
@@ -22,14 +21,9 @@ public class JavaArraylist {
         for (int i = 0; i < q; i++) {
             int x = sc.nextInt() - 1;
             int y = sc.nextInt() - 1;
-            if (x >= 0 && x < lines.size()) {
-                List<Integer> line = lines.get(x);
-                if (y >= 0 && y < line.size()) {
-                    System.out.println(line.get(y));
-                } else {
-                    System.out.println("ERROR!");
-                }
-            } else {
+            try {
+                System.out.println(lines.get(x).get(y));
+            } catch (IndexOutOfBoundsException e) {
                 System.out.println("ERROR!");
             }
         }
