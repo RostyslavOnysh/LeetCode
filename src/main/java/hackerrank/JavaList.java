@@ -7,36 +7,27 @@ import java.util.Scanner;
 public class JavaList {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        List<Integer> list = new ArrayList();
         int n = sc.nextInt();
-
-        List<Integer> result = new ArrayList<>();
-
         for (int i = 0; i < n; i++) {
-            result.add(sc.nextInt());
+            list.add(sc.nextInt());
         }
-
-        int query = sc.nextInt();  // query numb
-        sc.nextLine(); // consume the newline char
-
+        int query = sc.nextInt();
+        sc.nextLine();
         for (int i = 0; i < query; i++) {
-            String queryType = sc.nextLine();
+            String str = sc.next();
+            if (str.equals("Insert")) {
+                int index = sc.nextInt();
+                int element = sc.nextInt();
+                list.add(index, element);
+            } else if (str.equals("Delete")) {
+                int ind = sc.nextInt();
+                list.remove(ind);
 
-            if (queryType.equals("Insert")) {
-                int index = sc.nextInt();
-                int line = sc.nextInt();
-                sc.nextLine();
-                result.add(index,line);
-            }else if (queryType.equals("Delete")) {
-                int index = sc.nextInt();
-                sc.nextLine();
-                result.remove(index);
             }
         }
-         for (int num : result) {
-             System.out.println(num +" ");
-         }
-
-        sc.close();
-
+        for (int s : list) {
+            System.out.print(s + " ");
+        }
     }
 }
