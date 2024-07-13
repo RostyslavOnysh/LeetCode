@@ -9,7 +9,7 @@ public class Solution {
 
         for (int i = 0; i < words.length; i++) {
             for (int j = 0; j < words.length; j++) {
-                if (i != j && words[j].contains(words[i])) { //   if (i != j && words[j].indexOf(words[i]) != -1) {
+                if (i != j && words[j].contains(words[i])) {
                     result.add(words[i]);
                     break;
                 }
@@ -19,4 +19,18 @@ public class Solution {
     }
 }
 
+/*
+   Set<String> resultSet = new HashSet<>();
 
+        for (int i = 0; i < words.length; i++) {
+            for (int j = 0; j < words.length; j++) {
+                if (i != j && words[j].indexOf(words[i]) != -1) {
+                    resultSet.add(words[i]);
+                    break; // Once found as a substring, no need to check further
+                }
+            }
+        }
+
+        return new ArrayList<>(resultSet);
+    }
+ */
