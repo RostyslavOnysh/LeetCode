@@ -15,9 +15,10 @@ public class Solution {
 }
 
 
-  /*  int sumOfWords = 1;
+  /*
 
     public int countWords(String s) {
+    int sumOfWords = 1;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == ' ') {
                 sumOfWords++;
