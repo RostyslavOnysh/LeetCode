@@ -4,20 +4,38 @@ import java.util.Stack;
 
 public class Solution {
     public String reversePrefix(String word, char ch) {
-        Stack<Character> stack = new Stack<>();
-        StringBuilder result = new StringBuilder();
+        int left = 0;
+        char [] result = word.toCharArray();
 
+        for (int right = 0; right < word.length(); right++) {
+            if (result[right] == ch) {
+                while (left <= right) {
+                    swap(result, left, right);
+                    left++;
+                    right--;
+                }
+                return new String(result);
+            }
+        }
+        return word;
+    }
+
+    private void swap (char [] chars, int index1, int index2) {
+        char temp = chars[index2];
+        chars[index2] = chars[index1];
+        chars[index1] = temp;
+    }
+}
+       /* Stack<Character> stack = new Stack<>();
+        StringBuilder result = new StringBuilder();
         int index = 0;
         while (index < word.length()) {
             stack.push(word.charAt(index));
-            // Found ch
             if (word.charAt(index) == ch) {
-                // Add characters through ch to the result in reverse order
                 while (!stack.isEmpty()) {
                     result.append(stack.pop());
                 }
                 index++;
-                // Add the rest of the characters to result
                 while (index < word.length()) {
                     result.append(word.charAt(index));
                     index++;
@@ -26,7 +44,8 @@ public class Solution {
             }
             index++;
         }
-
         return word;
     }
 }
+
+        */
