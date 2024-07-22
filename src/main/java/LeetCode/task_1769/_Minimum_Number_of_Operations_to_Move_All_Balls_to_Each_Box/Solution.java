@@ -1,8 +1,5 @@
 package LeetCode.task_1769._Minimum_Number_of_Operations_to_Move_All_Balls_to_Each_Box;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Solution {
     public int[] minOperations(String boxes) {
         int length = boxes.length();
