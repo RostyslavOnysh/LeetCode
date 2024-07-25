@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class Manager {
     public static void main(String[] args) {
-        String s = "1769. Minimum Number of Operations to Move All Balls to Each Box";
+        String s = "2194 Cells in a Range on an Excel Sheet";
         System.out.println("task_" + result(s));
     }
 
