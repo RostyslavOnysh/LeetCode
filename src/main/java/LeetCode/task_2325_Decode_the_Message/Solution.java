@@ -1,7 +1,5 @@
 package LeetCode.task_2325_Decode_the_Message;
 
-import java.util.HashMap;
-
 public class Solution {
     public String decodeMessage(String key, String message) {
         char[] kChar = key.toCharArray();
