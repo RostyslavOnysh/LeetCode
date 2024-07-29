@@ -14,3 +14,18 @@ public class Solution {
         return sb.toString();
     }
 }
+
+/*
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+      int allLetter = (1<<26) - 1;
+      int mask = 0;
+
+      for (char c : sentence.toCharArray()) {
+        int pos = c - 'a';
+        mask|= (1<<pos);
+      }
+      return mask == allLetter;
+  }
+}
+ */
