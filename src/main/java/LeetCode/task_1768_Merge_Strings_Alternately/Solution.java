@@ -1,8 +1,5 @@
 package LeetCode.task_1768_Merge_Strings_Alternately;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Solution {
     public String mergeAlternately(String word1, String word2) {
         int i = 0, j = 0;
