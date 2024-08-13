@@ -1,13 +1,21 @@
 package LeetCode.task_1512_Number_of_Good_Pairs;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Solution {
     public int numIdenticalPairs(int[] nums) {
+        Map<Integer, Integer> freqMap = new HashMap<>();
+
+        for (int num : nums) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+        }
+
+
         int res = 0;
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if(nums[i]==nums[j] && i < j) {
-                    res++;
-                }
+        for (int count : freqMap.values()) {
+            if (count > 1) {
+                res += (count * (count - 1)) / 2;
             }
         }
         return res;
