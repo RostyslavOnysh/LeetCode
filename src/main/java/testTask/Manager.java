@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class Manager {
     public static void main(String[] args) {
-        String s = "1614. Maximum Nesting Depth of the Parentheses";
+        String s = "3190. Find Minimum Operations to Make All Elements Divisible by Three";
         System.out.println("task_" + result(s));
     }
 
