@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class Manager {
     public static void main(String[] args) {
-        String s = "3190. Find Minimum Operations to Make All Elements Divisible by Three";
+        String s = "1365. How Many Numbers Are Smaller Than the Current Number";
         System.out.println("task_" + result(s));
     }
 
