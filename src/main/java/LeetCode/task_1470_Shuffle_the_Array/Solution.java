@@ -2,21 +2,20 @@ package LeetCode.task_1470_Shuffle_the_Array;
 
 public class Solution {
     public int[] shuffle(int[] nums, int n) {
-        int size = nums.length;
-        int [] res = new int[size];
-
-        int i = 0, j = n;
-        int counter = 0;
-
-        while (counter < size) {
-            if (counter % 2 == 0) {
-                res[counter] = nums[i++];
-            } else {
-                res[counter] = nums[j++];
-            }
-            counter++;
+        for(int i = 0; i < n; i++)  {
+            nums[i] = (nums[i] << 10) | nums[i + n];
         }
-        return res;
+
+        for (int i = n - 1; i >= 0; i--) {
+            int x = nums[i] >> 10;
+            int y = nums[i] & 0x3FF;
+
+            nums[2 * i] = x;
+            nums[2 * i + 1] = y;
+        }
+
+        System.gc();
+        return nums;
     }
 }
 
