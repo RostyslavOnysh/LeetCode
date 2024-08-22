@@ -20,3 +20,24 @@ class Solution {
         return uniqueMorse.size();
     }
 }
+
+
+/*
+   String[] morse  = {
+                ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
+                "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-",
+                "..-", "...-", ".--", "-..-", "-.--", "--.."};
+        Set<Integer> uniqueMorse = new HashSet<>();
+            for (String word : words) {
+              int hash = 0;
+                    for (char c : word.toCharArray()) {
+                        String morseCode = morse[c - 'a'];
+                        for(int i = 0; i < morseCode.length();i++) {
+                            hash  = 31 * hash + morseCode.charAt(i);
+                        }
+                    }
+                uniqueMorse.add(hash);
+            }
+        return uniqueMorse.size();
+    }
+ */
