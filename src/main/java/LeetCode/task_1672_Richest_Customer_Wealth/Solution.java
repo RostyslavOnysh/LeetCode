@@ -17,7 +17,6 @@ public class Solution {
     }
 }
 
-
 // i - customer
 // j - bank
 // Return the wealth that the richest customer has.
