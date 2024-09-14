@@ -1,22 +1,22 @@
 package LeetCode.task_242_Valid_anagram;
 
+import java.util.HashMap;
+
 public class Solution {
     public boolean isAnagram(String s, String t) {
-        int[] freq = new int[26];
-        for (char ch : s.toCharArray()) {
-            int index = ch - 'a';
-            freq[index] += 1;
+        if (s.length() != t.length()) {
+            return false;
         }
-        for (char ch : t.toCharArray()) {
-            int index = ch - 'a';
-            freq[index] -= 1;
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+            map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0) - 1);
         }
-        for (int i : freq) {
-            if (i != 0) {
+        for (int count : map.values()) {
+            if (count != 0) {
                 return false;
             }
         }
         return true;
     }
 }
-
