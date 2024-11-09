@@ -3,22 +3,26 @@ package LeetCode.task_1004_Max_Consecutive_Ones_III;
 class Solution {
     public int longestOnes(int[] nums, int k) {
         int left = 0;
-        int maxOne = 0;
-        int maxZero = 0;
+        int maxLength = 0;
+        int zerosCounts = 0;
 
-        for (int rigth = 0; rigth < nums.length; rigth++) {
-            if (nums[rigth] == 0) {
-                maxZero++;
+        for (int right = 0; right < nums.length; right++) {
+            if (nums[right] == 0) {
+                zerosCounts++;
             }
 
-            while (maxZero > k) {
+            while (zerosCounts > k) {
                 if (nums[left] == 0) {
-                    maxZero--;
+                    zerosCounts--;
                 }
                 left++;
             }
-            maxOne = Math.max(maxOne, rigth - left+1);
+
+            int currWindow = right - left + 1;
+            if (currWindow > maxLength) {
+                maxLength = currWindow;
+            }
         }
-        return maxOne;
+        return maxLength;
     }
 }
